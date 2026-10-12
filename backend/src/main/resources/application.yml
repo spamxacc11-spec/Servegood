@@ -50,7 +50,7 @@ app:
   storage:
     # Local disk storage for development. Swap StorageService for a cloud implementation later.
     local-directory: ${UPLOAD_DIR:./uploads}
-    public-base-url: ${UPLOAD_PUBLIC_BASE_URL:http://localhost:8081/uploads}
+    public-base-url: ${UPLOAD_PUBLIC_BASE_URL:https://servegood.onrender.com/uploads}
   hygiene:
     # How long an approved audit keeps a restaurant "verified".
     validity-months: 12

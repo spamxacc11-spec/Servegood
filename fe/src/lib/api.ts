@@ -9,7 +9,10 @@ import type { AuthResponse } from "./types";
  * then the original request is retried once.
  */
 
-export const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8081/api").replace(/\/+$/, "");
+export const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL ??
+  (import.meta.env.DEV ? "http://localhost:8081/api" : "https://servegood.onrender.com/api")
+).replace(/\/+$/, "");
 
 export class ApiError extends Error {
   status: number;
