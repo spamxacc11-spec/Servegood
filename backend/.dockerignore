@@ -1,0 +1,6 @@
+target/
+.git
+.local
+*.log
+.env
+uploads/

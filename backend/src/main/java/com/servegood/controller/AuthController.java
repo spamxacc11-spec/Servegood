@@ -100,7 +100,7 @@ public class AuthController {
         return ResponseCookie.from(REFRESH_COOKIE, value)
                 .httpOnly(true)
                 .secure(props.jwt().secureCookie())
-                .sameSite("Strict")
+                .sameSite(props.jwt().secureCookie() ? "None" : "Lax")
                 .path("/api/auth")
                 .maxAge(maxAge)
                 .build();
